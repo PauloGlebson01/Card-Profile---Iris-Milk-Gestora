@@ -1,0 +1,158 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Container principal */
+body {
+  background: #0f172a; /* azul escuro corporativo */
+  color: #e2e8f0; /* cinza claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Card container */
+#container {
+  width: 360px;
+  min-height: 90vh;
+  background: url('./assets/Gestora-hero.webp') no-repeat center center;
+  background-size: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Overlay */
+#container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.9); /* navy escuro translúcido */
+  border-radius: 16px;
+  z-index: 0;
+}
+
+#container > * {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Perfil */
+#profile {
+  margin-bottom: 30px;
+}
+
+#profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #2199ef; /* azul corporativo */
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+#profile h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+#profile p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+/* Menu de contato */
+nav {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+nav .menu li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+nav .menu a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+nav .menu a:hover {
+  background: #2199ef;
+  color: #0f172a;
+  border-color: #2199ef;
+  transform: translateY(-2px);
+}
+
+/* Redes sociais */
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#social-links a {
+  color: #e2e8f0;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#social-links a:hover {
+  color: #2199ef;
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Responsividade */
+@media (max-width: 420px) {
+  #container {
+    padding: 18px;
+    width: 100%;
+  }
+
+  #profile img {
+    width: 90px;
+    height: 90px;
+  }
+
+  #profile h2 {
+    font-size: 1.1rem;
+  }
+}
